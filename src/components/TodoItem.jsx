@@ -1,5 +1,10 @@
-function TodoItem({ text }) {
-  return <li className="todo-item">{text}</li>;
+function TodoItem({ todo, deleteTodo }) {
+  return (
+    <li>
+      {todo.text}
+      <button onClick={() => deleteTodo(todo.id)}>❌</button>
+    </li>
+  );
 }
 
 export default TodoItem;
